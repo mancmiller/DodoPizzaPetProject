@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainTabVC.swift
 //  DodoPizzaPetProject
 //
 //  Created by Muslim on 26.06.2023.
@@ -7,13 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class MainTabVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .systemGray
     }
-
-
 }
-
