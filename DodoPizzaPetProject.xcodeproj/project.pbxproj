@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040945FE2A4B2C3E00D3157E /* ProductModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 040945FC2A4B2C3E00D3157E /* ProductModel.xcdatamodeld */; };
+		040946012A4B2CDC00D3157E /* ProductEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040945FF2A4B2CDC00D3157E /* ProductEntity+CoreDataClass.swift */; };
+		040946022A4B2CDC00D3157E /* ProductEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040946002A4B2CDC00D3157E /* ProductEntity+CoreDataProperties.swift */; };
 		046A83BA2A49920A00C8E7D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83B92A49920A00C8E7D6 /* AppDelegate.swift */; };
 		046A83BC2A49920A00C8E7D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83BB2A49920A00C8E7D6 /* SceneDelegate.swift */; };
 		046A83C32A49920C00C8E7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046A83C22A49920C00C8E7D6 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040945FD2A4B2C3E00D3157E /* ProductModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProductModel.xcdatamodel; sourceTree = "<group>"; };
+		040945FF2A4B2CDC00D3157E /* ProductEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		040946002A4B2CDC00D3157E /* ProductEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		046A83B62A49920A00C8E7D6 /* DodoPizzaPetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DodoPizzaPetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046A83B92A49920A00C8E7D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046A83BB2A49920A00C8E7D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040945FB2A4B2C2B00D3157E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				040945FF2A4B2CDC00D3157E /* ProductEntity+CoreDataClass.swift */,
+				040946002A4B2CDC00D3157E /* ProductEntity+CoreDataProperties.swift */,
+				040945FC2A4B2C3E00D3157E /* ProductModel.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		046A83AD2A49920A00C8E7D6 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +108,7 @@
 		046A83B82A49920A00C8E7D6 /* DodoPizzaPetProject */ = {
 			isa = PBXGroup;
 			children = (
+				040945FB2A4B2C2B00D3157E /* Models */,
 				046A83CF2A49953300C8E7D6 /* App */,
 				046A83E82A49A7D800C8E7D6 /* Library */,
 				046A83D02A49954D00C8E7D6 /* Screens */,
@@ -253,8 +270,10 @@
 			files = (
 				046A83F02A49A9C500C8E7D6 /* CartView.swift in Sources */,
 				046A83EE2A49A99900C8E7D6 /* CartPresenter.swift in Sources */,
+				040946012A4B2CDC00D3157E /* ProductEntity+CoreDataClass.swift in Sources */,
 				046A83E72A49A60200C8E7D6 /* CartRouter.swift in Sources */,
 				046A83FE2A49B09C00C8E7D6 /* ProductDetailVC.swift in Sources */,
+				040945FE2A4B2C3E00D3157E /* ProductModel.xcdatamodeld in Sources */,
 				046A83BA2A49920A00C8E7D6 /* AppDelegate.swift in Sources */,
 				046A83E12A49A57300C8E7D6 /* MenuView.swift in Sources */,
 				046A83CE2A4994C100C8E7D6 /* MainTabVC.swift in Sources */,
@@ -266,6 +285,7 @@
 				046A83F22A49A9F200C8E7D6 /* CartVC.swift in Sources */,
 				046A83DB2A49A4DD00C8E7D6 /* MenuRouter.swift in Sources */,
 				046A83FC2A49B06B00C8E7D6 /* ProductDetaileView.swift in Sources */,
+				040946022A4B2CDC00D3157E /* ProductEntity+CoreDataProperties.swift in Sources */,
 				046A83EA2A49A86F00C8E7D6 /* ScreenRoutable.swift in Sources */,
 				046A83EC2A49A95500C8E7D6 /* CartInteractor.swift in Sources */,
 				046A83BC2A49920A00C8E7D6 /* SceneDelegate.swift in Sources */,
@@ -496,6 +516,19 @@
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		040945FC2A4B2C3E00D3157E /* ProductModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				040945FD2A4B2C3E00D3157E /* ProductModel.xcdatamodel */,
+			);
+			currentVersion = 040945FD2A4B2C3E00D3157E /* ProductModel.xcdatamodel */;
+			path = ProductModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 046A83AE2A49920A00C8E7D6 /* Project object */;
 }
