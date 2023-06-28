@@ -7,11 +7,17 @@
 
 final class MenuAssembly {
     func configure() -> MenuVC {
+        
+        let tableAdapter = MenuTableAdapter()
+        
         let router = MenuRouter()
-        let view = MenuView()
+        let view = MenuView(tableAdapter: tableAdapter)
         let interactor = MenuInteractor()
         let presenter = MenuPresenter()
-        let controller = MenuVC()
+        let controller = MenuVC(presenter: presenter as! MenuViewOutputProtocol, rootView: view)
+        
+        tableAdapter.controller = controller
+        
         return controller
     }
 }

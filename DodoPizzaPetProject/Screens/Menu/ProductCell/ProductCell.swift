@@ -11,7 +11,7 @@ final class ProductCell: UITableViewCell {
     
     static let reuseID = "ProductCell"
     
-    //MARK: - Private Properties
+// MARK: - Private Properties
     private let productImageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
@@ -53,8 +53,7 @@ final class ProductCell: UITableViewCell {
         return stackView
     }()
     
-    //MARK: - Life Cycle
-    
+// MARK: - Life Cycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupConstraints()
@@ -64,8 +63,7 @@ final class ProductCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Public Methods
-    
+// MARK: - Public Methods    
     func configure(model: Product) {
         productNameLabel.text = model.name
         productDescriptionLabel.text = model.itemDescription
@@ -74,7 +72,7 @@ final class ProductCell: UITableViewCell {
     }
 }
 
-//MARK: - Setup Constraints
+// MARK: - Setup Constraints
 extension ProductCell {
     
     private struct Appearance {
