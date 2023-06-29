@@ -8,10 +8,10 @@
 
 final class CartAssembly {
     func configure() -> CartVC {
-        let router = CartRouter()
-        let view = CartView()
-        let interactor = CartInteractor()
-        let presenter = CartPresenter()
+//        let router = CartRouter()
+//        let view = CartView()
+//        let interactor = CartInteractor()
+//        let presenter = CartPresenter()
         let controller = CartVC()
         return controller
     }

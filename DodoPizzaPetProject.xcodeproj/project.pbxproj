@@ -13,6 +13,11 @@
 		040946062A4B30D200D3157E /* MenuTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040946052A4B30D200D3157E /* MenuTableAdapter.swift */; };
 		040946082A4B320200D3157E /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040946072A4B320200D3157E /* ProductResponse.swift */; };
 		0409460B2A4B33C500D3157E /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409460A2A4B33C500D3157E /* ProductCell.swift */; };
+		042059102A4D92FC00521BF3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420590F2A4D92FC00521BF3 /* Endpoint.swift */; };
+		042059122A4D934A00521BF3 /* ProductsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042059112A4D934A00521BF3 /* ProductsEndpoint.swift */; };
+		042059152A4DAD1300521BF3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042059142A4DAD1300521BF3 /* API.swift */; };
+		042059172A4DAE4F00521BF3 /* ProductsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042059162A4DAE4F00521BF3 /* ProductsAPI.swift */; };
+		0420591A2A4DC6AB00521BF3 /* ProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042059192A4DC6AB00521BF3 /* ProductsRepository.swift */; };
 		046A83BA2A49920A00C8E7D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83B92A49920A00C8E7D6 /* AppDelegate.swift */; };
 		046A83BC2A49920A00C8E7D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83BB2A49920A00C8E7D6 /* SceneDelegate.swift */; };
 		046A83C32A49920C00C8E7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046A83C22A49920C00C8E7D6 /* Assets.xcassets */; };
@@ -46,6 +51,11 @@
 		040946052A4B30D200D3157E /* MenuTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableAdapter.swift; sourceTree = "<group>"; };
 		040946072A4B320200D3157E /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		0409460A2A4B33C500D3157E /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		0420590F2A4D92FC00521BF3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		042059112A4D934A00521BF3 /* ProductsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsEndpoint.swift; sourceTree = "<group>"; };
+		042059142A4DAD1300521BF3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		042059162A4DAE4F00521BF3 /* ProductsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsAPI.swift; sourceTree = "<group>"; };
+		042059192A4DC6AB00521BF3 /* ProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRepository.swift; sourceTree = "<group>"; };
 		046A83B62A49920A00C8E7D6 /* DodoPizzaPetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DodoPizzaPetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046A83B92A49920A00C8E7D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046A83BB2A49920A00C8E7D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +114,50 @@
 			path = ProductCell;
 			sourceTree = "<group>";
 		};
+		0420590C2A4D8F4200521BF3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				042059182A4DC69300521BF3 /* Repository */,
+				0420590D2A4D8F6A00521BF3 /* Network Layer */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0420590D2A4D8F6A00521BF3 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				042059132A4DACFE00521BF3 /* API */,
+				0420590E2A4D92DF00521BF3 /* Endpoints */,
+			);
+			name = "Network Layer";
+			sourceTree = "<group>";
+		};
+		0420590E2A4D92DF00521BF3 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				0420590F2A4D92FC00521BF3 /* Endpoint.swift */,
+				042059112A4D934A00521BF3 /* ProductsEndpoint.swift */,
+			);
+			name = Endpoints;
+			sourceTree = "<group>";
+		};
+		042059132A4DACFE00521BF3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				042059142A4DAD1300521BF3 /* API.swift */,
+				042059162A4DAE4F00521BF3 /* ProductsAPI.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		042059182A4DC69300521BF3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				042059192A4DC6AB00521BF3 /* ProductsRepository.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
 		046A83AD2A49920A00C8E7D6 = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +178,10 @@
 			isa = PBXGroup;
 			children = (
 				040945FB2A4B2C2B00D3157E /* Models */,
-				046A83CF2A49953300C8E7D6 /* App */,
+				0420590C2A4D8F4200521BF3 /* Services */,
 				046A83E82A49A7D800C8E7D6 /* Library */,
 				046A83D02A49954D00C8E7D6 /* Screens */,
+				046A83CF2A49953300C8E7D6 /* App */,
 				046A83D12A49955600C8E7D6 /* Settings */,
 			);
 			path = DodoPizzaPetProject;
@@ -286,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				046A83F02A49A9C500C8E7D6 /* CartView.swift in Sources */,
+				042059102A4D92FC00521BF3 /* Endpoint.swift in Sources */,
 				040946062A4B30D200D3157E /* MenuTableAdapter.swift in Sources */,
 				046A83EE2A49A99900C8E7D6 /* CartPresenter.swift in Sources */,
 				040946012A4B2CDC00D3157E /* ProductEntity+CoreDataClass.swift in Sources */,
@@ -305,12 +361,16 @@
 				040946082A4B320200D3157E /* ProductResponse.swift in Sources */,
 				046A83DB2A49A4DD00C8E7D6 /* MenuRouter.swift in Sources */,
 				046A83FC2A49B06B00C8E7D6 /* ProductDetaileView.swift in Sources */,
+				0420591A2A4DC6AB00521BF3 /* ProductsRepository.swift in Sources */,
 				040946022A4B2CDC00D3157E /* ProductEntity+CoreDataProperties.swift in Sources */,
 				046A83EA2A49A86F00C8E7D6 /* ScreenRoutable.swift in Sources */,
+				042059152A4DAD1300521BF3 /* API.swift in Sources */,
 				046A83EC2A49A95500C8E7D6 /* CartInteractor.swift in Sources */,
 				046A83BC2A49920A00C8E7D6 /* SceneDelegate.swift in Sources */,
+				042059172A4DAE4F00521BF3 /* ProductsAPI.swift in Sources */,
 				046A83F82A49ABDD00C8E7D6 /* ProductDetailPresenter.swift in Sources */,
 				046A83FA2A49AC3000C8E7D6 /* ProductDetailRouter.swift in Sources */,
+				042059122A4D934A00521BF3 /* ProductsEndpoint.swift in Sources */,
 				046A83F42A49AB5C00C8E7D6 /* ProductDetailAssembly.swift in Sources */,
 				046A83DF2A49A53500C8E7D6 /* MenuPresenter.swift in Sources */,
 			);
