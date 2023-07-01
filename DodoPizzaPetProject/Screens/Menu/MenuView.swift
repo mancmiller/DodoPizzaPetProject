@@ -25,7 +25,7 @@ final class MenuView: UIView {
 // MARK: - Life Cycle
     init(tableAdapter: MenuTableAdapter) {
         self.tableAdapter = tableAdapter
-        super.init(frame: UIScreen.main.bounds)
+        super.init(frame: UIScreen.main.bounds) // need to refactor
         setupConstraints()
     }
     

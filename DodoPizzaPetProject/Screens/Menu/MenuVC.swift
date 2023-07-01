@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol MenuViewInputProtocol {
+protocol MenuViewInputProtocol: AnyObject {
     func updateProducts(_ products: [Product])
 }
 

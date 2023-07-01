@@ -18,6 +18,8 @@
 		042059152A4DAD1300521BF3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042059142A4DAD1300521BF3 /* API.swift */; };
 		042059172A4DAE4F00521BF3 /* ProductsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042059162A4DAE4F00521BF3 /* ProductsAPI.swift */; };
 		0420591A2A4DC6AB00521BF3 /* ProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042059192A4DC6AB00521BF3 /* ProductsRepository.swift */; };
+		0420591D2A4EF5A800521BF3 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420591C2A4EF5A800521BF3 /* CategoriesView.swift */; };
+		0420591F2A4EF6B600521BF3 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420591E2A4EF6B600521BF3 /* CategoryCell.swift */; };
 		046A83BA2A49920A00C8E7D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83B92A49920A00C8E7D6 /* AppDelegate.swift */; };
 		046A83BC2A49920A00C8E7D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83BB2A49920A00C8E7D6 /* SceneDelegate.swift */; };
 		046A83C32A49920C00C8E7D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046A83C22A49920C00C8E7D6 /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		042059142A4DAD1300521BF3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		042059162A4DAE4F00521BF3 /* ProductsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsAPI.swift; sourceTree = "<group>"; };
 		042059192A4DC6AB00521BF3 /* ProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRepository.swift; sourceTree = "<group>"; };
+		0420591C2A4EF5A800521BF3 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		0420591E2A4EF6B600521BF3 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		046A83B62A49920A00C8E7D6 /* DodoPizzaPetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DodoPizzaPetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046A83B92A49920A00C8E7D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046A83BB2A49920A00C8E7D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,15 @@
 			name = Repository;
 			sourceTree = "<group>";
 		};
+		0420591B2A4EF59400521BF3 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				0420591C2A4EF5A800521BF3 /* CategoriesView.swift */,
+				0420591E2A4EF6B600521BF3 /* CategoryCell.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
 		046A83AD2A49920A00C8E7D6 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +232,7 @@
 		046A83D52A49A34300C8E7D6 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				0420591B2A4EF59400521BF3 /* HeaderView */,
 				040946092A4B33BA00D3157E /* ProductCell */,
 				046A83D82A49A3CB00C8E7D6 /* MenuAssembly.swift */,
 				046A83DC2A49A51200C8E7D6 /* MenuInteractor.swift */,
@@ -342,10 +356,12 @@
 			files = (
 				046A83F02A49A9C500C8E7D6 /* CartView.swift in Sources */,
 				042059102A4D92FC00521BF3 /* Endpoint.swift in Sources */,
+				0420591F2A4EF6B600521BF3 /* CategoryCell.swift in Sources */,
 				040946062A4B30D200D3157E /* MenuTableAdapter.swift in Sources */,
 				046A83EE2A49A99900C8E7D6 /* CartPresenter.swift in Sources */,
 				040946012A4B2CDC00D3157E /* ProductEntity+CoreDataClass.swift in Sources */,
 				046A83E72A49A60200C8E7D6 /* CartRouter.swift in Sources */,
+				0420591D2A4EF5A800521BF3 /* CategoriesView.swift in Sources */,
 				0409460B2A4B33C500D3157E /* ProductCell.swift in Sources */,
 				046A83FE2A49B09C00C8E7D6 /* ProductDetailVC.swift in Sources */,
 				040945FE2A4B2C3E00D3157E /* ProductModel.xcdatamodeld in Sources */,

@@ -23,6 +23,6 @@ class MainTabVC: UITabBarController {
         
         let menuNav = UINavigationController(rootViewController: menuVC)
         
-        self.viewControllers = [menuVC, cartVC]
+        self.viewControllers = [menuNav, cartVC]
     }
 }
