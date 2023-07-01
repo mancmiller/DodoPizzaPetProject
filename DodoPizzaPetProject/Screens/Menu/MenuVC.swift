@@ -9,10 +9,12 @@ import UIKit
 
 protocol MenuViewInputProtocol: AnyObject {
     func updateProducts(_ products: [Product])
+    func updateCategories(_ categories: [String])
 }
 
 protocol MenuViewOutputProtocol {
     func fetchProducts()
+    func fetchCategories()
     func itemSelected(index: Int)
     var products: [Product] { get set }
 }
@@ -51,12 +53,25 @@ extension MenuVC: MenuTableAdapterOutputProtocol {
     }
 }
 
+//MARK: - CategoriesViewDelegate
+extension MenuVC: CategoriesViewDelegate {
+    func scrollToRow(with category: String) {
+        guard let index = presenter.products.firstIndex(where: { $0.category == category }) else { return }
+        rootView.tableView.scrollToRow(at: IndexPath(row: index, section: 0), at: .top, animated: true)
+    }
+}
+
 // MARK: - MenuViewInputProtocol
 extension MenuVC: MenuViewInputProtocol {
     func updateProducts(_ products: [Product]) {
         rootView.tableView.allowsSelection = true
         rootView.tableAdapter.items = products
-        presenter.fetchProducts()
+        presenter.fetchCategories()
+        rootView.tableView.reloadData()
+    }
+    
+    func updateCategories(_ categories: [String]) {
+        rootView.tableAdapter.categories = categories
         rootView.tableView.reloadData()
     }
 }

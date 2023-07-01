@@ -15,12 +15,16 @@ protocol ProductsRepositoryInputProtocol {
 final class ProductsRepository: ProductsRepositoryInputProtocol {
     
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "ProductModel")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        
+        guard let modelUrl = Bundle.main.url(forResource: "ProductsData", withExtension: "momd"),
+              let model = NSManagedObjectModel(contentsOf: modelUrl) else { return NSPersistentContainer() }
+        
+        let container = NSPersistentCloudKitContainer(name: "ProductModel", managedObjectModel: model)
+        container.loadPersistentStores { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
-        })
+        }
         return container
     }()
     

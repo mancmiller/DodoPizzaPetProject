@@ -20,7 +20,6 @@ final class ProductCell: UITableViewCell {
     
     private let productNameLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 17, weight: .semibold)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
@@ -29,7 +28,6 @@ final class ProductCell: UITableViewCell {
     
     private let productDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 13)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .natural
@@ -41,12 +39,12 @@ final class ProductCell: UITableViewCell {
     private let priceButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "accentColor")
-        button.layer.cornerRadius = button.frame.height / 2
         return button
     }()
     
     private let mainStackView: UIStackView = {
         let stackView = UIStackView()
+        stackView.axis = .vertical
         stackView.alignment = .leading
         stackView.distribution = .fillProportionally
         stackView.spacing = 5
@@ -61,6 +59,14 @@ final class ProductCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        priceButton.layer.cornerRadius = priceButton.frame.height / 2
+        productNameLabel.font = .systemFont(ofSize: 20, weight: .medium)
+        productDescriptionLabel.font = .systemFont(ofSize: 16)
+        
     }
     
 // MARK: - Public Methods    

@@ -13,7 +13,7 @@ final class MenuView: UIView {
     var tableAdapter: MenuTableAdapter
     
     lazy var tableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero)
         tableView.allowsSelection = false
         tableView.register(ProductCell.self, forCellReuseIdentifier: ProductCell.reuseID)
         tableView.dataSource = tableAdapter
@@ -26,6 +26,7 @@ final class MenuView: UIView {
     init(tableAdapter: MenuTableAdapter) {
         self.tableAdapter = tableAdapter
         super.init(frame: UIScreen.main.bounds) // need to refactor
+        backgroundColor = .systemBackground
         setupConstraints()
     }
     

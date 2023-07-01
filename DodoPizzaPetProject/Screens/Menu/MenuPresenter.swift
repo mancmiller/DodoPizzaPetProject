@@ -19,6 +19,13 @@ final class MenuPresenter: MenuViewOutputProtocol {
         self.interactor = interactor
     }
     
+    func fetchCategories() {
+        var category: Set<String> = []
+        for product in products {
+            category.insert(product.category)
+        }
+    }
+    
     func fetchProducts() {
         interactor?.fetchProducts()
     }
@@ -31,7 +38,11 @@ final class MenuPresenter: MenuViewOutputProtocol {
 extension MenuPresenter: MenuInteractorOutputProtocol {
     func fetchedProducts(_ data: ProductsResponse) {
         DispatchQueue.main.async { [ weak self ] in
-            let productItems = data.items
+            
+            let productItems = data.items.sorted(by: {first, second in
+                return first.category > second.category
+            })
+            
             self?.products = productItems
             self?.view?.updateProducts(productItems)
         }
