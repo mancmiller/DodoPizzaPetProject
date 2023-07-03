@@ -26,6 +26,7 @@ final class CategoriesView: UITableViewHeaderFooterView {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(CategoryCell.self, forCellWithReuseIdentifier: CategoryCell.reuseID)
+//        collectionView.backgroundColor = .systemBackground
         return collectionView
     }()
     
@@ -47,8 +48,9 @@ final class CategoriesView: UITableViewHeaderFooterView {
     }
     
     private func createButtonView() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                              heightDimension: .fractionalWidth(1))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                              heightDimension: .fractionalHeight(1.0))
+        
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8)
         

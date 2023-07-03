@@ -14,7 +14,7 @@ final class CategoryCell: UICollectionViewCell {
     
 // MARK: - Private Properties
     private let titleLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.numberOfLines = 1
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
@@ -52,7 +52,6 @@ final class CategoryCell: UICollectionViewCell {
     
 // MARK: - Private Methods
     private func setupView() {
-//        backgroundColor = .systemBackground
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = UIColor(named: "accentColor")?.cgColor
         contentView.layer.cornerRadius = contentView.frame.height / 2

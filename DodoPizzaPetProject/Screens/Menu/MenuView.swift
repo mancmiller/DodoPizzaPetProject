@@ -18,7 +18,7 @@ final class MenuView: UIView {
         tableView.register(ProductCell.self, forCellReuseIdentifier: ProductCell.reuseID)
         tableView.dataSource = tableAdapter
         tableView.delegate = tableAdapter
-//        tableView.separatorStyle = .none
+        tableView.separatorStyle = .none
         return tableView
     }()
     

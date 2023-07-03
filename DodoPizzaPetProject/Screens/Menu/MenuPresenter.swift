@@ -24,6 +24,9 @@ final class MenuPresenter: MenuViewOutputProtocol {
         for product in products {
             category.insert(product.category)
         }
+        let sortedCategories = [String](category).sorted(by: >)
+        
+        view?.updateCategories(sortedCategories)
     }
     
     func fetchProducts() {
