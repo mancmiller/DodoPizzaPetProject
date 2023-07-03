@@ -8,6 +8,7 @@
 import UIKit
 
 protocol MenuViewInputProtocol: AnyObject {
+    func updateBanners(_ banners: [String])
     func updateProducts(_ products: [Product])
     func updateCategories(_ categories: [String])
 }
@@ -24,7 +25,7 @@ final class MenuVC: UIViewController, ScreenRoutable {
     var presenter: MenuViewOutputProtocol
     var rootView: MenuView
     
-// MARK: - Life Cycle
+    // MARK: - Life Cycle
     init(presenter: MenuViewOutputProtocol, rootView: MenuView) {
         self.presenter = presenter
         self.rootView = rootView
@@ -67,6 +68,11 @@ extension MenuVC: MenuViewInputProtocol {
         rootView.tableView.allowsSelection = true
         rootView.tableAdapter.items = products
         presenter.fetchCategories()
+        rootView.tableView.reloadData()
+    }
+    
+    func updateBanners(_ banners: [String]) {
+        rootView.bannersHeaderView.update(bannersString: banners)
         rootView.tableView.reloadData()
     }
     

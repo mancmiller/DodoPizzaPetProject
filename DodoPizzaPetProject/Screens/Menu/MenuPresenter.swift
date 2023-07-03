@@ -48,6 +48,7 @@ extension MenuPresenter: MenuInteractorOutputProtocol {
             
             self?.products = productItems
             self?.view?.updateProducts(productItems)
+            self?.view?.updateBanners(data.banners)
         }
     }
 }

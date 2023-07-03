@@ -18,11 +18,20 @@ final class MenuView: UIView {
         tableView.register(ProductCell.self, forCellReuseIdentifier: ProductCell.reuseID)
         tableView.dataSource = tableAdapter
         tableView.delegate = tableAdapter
+        tableView.tableHeaderView = bannersHeaderView
         tableView.separatorStyle = .none
         return tableView
     }()
     
-// MARK: - Life Cycle
+    // MARK: - BannersView
+    lazy var bannersHeaderView: BannersView = {
+        let width = UIScreen.main.bounds.size.width
+        let height = width * 0.3
+        let bannerView = BannersView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        return bannerView
+    }()
+    
+    // MARK: - Life Cycle
     init(tableAdapter: MenuTableAdapter) {
         self.tableAdapter = tableAdapter
         super.init(frame: UIScreen.main.bounds) // need to refactor

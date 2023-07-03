@@ -28,7 +28,7 @@ enum ProductsEndpoint: Endpoint {
     var path: String {
         switch self {
         case .fetchProducts:
-            return "/v3/527b1cf1-a919-4059-ab4a-89e96f9f662c"
+            return "/v3/3f71390e-889a-4dd3-81b8-32c20817ee97"
         }
     }
     
