@@ -63,7 +63,7 @@ extension CategoryCell {
     private func setupContraints() {
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
-            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8))
+            make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12))
         }
     }
 }

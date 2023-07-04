@@ -42,6 +42,7 @@ final class MenuVC: UIViewController, ScreenRoutable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rootView.delegate = self
         presenter.fetchProducts()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -51,6 +52,20 @@ final class MenuVC: UIViewController, ScreenRoutable {
 extension MenuVC: MenuTableAdapterOutputProtocol {
     func itemSelected(index: Int) {
         presenter.itemSelected(index: index)
+    }
+}
+
+// MARK: - UIPopoverPresentationControllerDelegate
+extension MenuVC: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+}
+
+// MARK: - CityPopOverViewOutputProtocol
+extension MenuVC: CityPopOverViewOutputProtocol {
+    func selectedCity(_ string: String) {
+        rootView.cityLabel.text = string
     }
 }
 
@@ -79,5 +94,24 @@ extension MenuVC: MenuViewInputProtocol {
     func updateCategories(_ categories: [String]) {
         rootView.tableAdapter.categories = categories
         rootView.tableView.reloadData()
+    }
+}
+
+// MARK: - MenuViewDelegateProtocol
+
+extension MenuVC: MenuViewDelegateProtocol {
+    func menuViewCityButtonTapped(imageView: UIImageView) {
+        let cityPopOverVC = CityPopOverViewController()
+        cityPopOverVC.modalPresentationStyle = .popover
+        cityPopOverVC.preferredContentSize = CGSize(width: 190, height: 220)
+        cityPopOverVC.delegate = self
+        
+        guard let presentationVC = cityPopOverVC.popoverPresentationController else { return }
+        presentationVC.delegate = self
+        presentationVC.sourceView = imageView
+        presentationVC.permittedArrowDirections = .up
+        presentationVC.sourceRect =  CGRect(x: imageView.bounds.midX,
+                                            y: imageView.bounds.midY, width: 0, height: 0)
+        present(cityPopOverVC, animated: true)
     }
 }

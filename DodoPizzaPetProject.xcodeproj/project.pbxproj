@@ -46,6 +46,8 @@
 		046A83FA2A49AC3000C8E7D6 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83F92A49AC3000C8E7D6 /* ProductDetailRouter.swift */; };
 		046A83FC2A49B06B00C8E7D6 /* ProductDetaileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83FB2A49B06B00C8E7D6 /* ProductDetaileView.swift */; };
 		046A83FE2A49B09C00C8E7D6 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83FD2A49B09C00C8E7D6 /* ProductDetailVC.swift */; };
+		047F417B2A53DE8700A099C8 /* CityPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F417A2A53DE8700A099C8 /* CityPopOverViewController.swift */; };
+		047F417D2A53E27F00A099C8 /* CityPopOverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F417C2A53E27F00A099C8 /* CityPopOverCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		046A83F92A49AC3000C8E7D6 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
 		046A83FB2A49B06B00C8E7D6 /* ProductDetaileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetaileView.swift; sourceTree = "<group>"; };
 		046A83FD2A49B09C00C8E7D6 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductDetailVC.swift; path = ../../../../../../../../../Applications/ProductDetailVC.swift; sourceTree = "<group>"; };
+		047F417A2A53DE8700A099C8 /* CityPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPopOverViewController.swift; sourceTree = "<group>"; };
+		047F417C2A53E27F00A099C8 /* CityPopOverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPopOverCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 		0420591B2A4EF59400521BF3 /* HeaderView */ = {
 			isa = PBXGroup;
 			children = (
+				047F41792A53DE6300A099C8 /* CityPopOver */,
 				04042AB62A52E75F00F08A8F /* Banners */,
 				04042AB52A52E74100F08A8F /* Categories */,
 			);
@@ -301,6 +306,15 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		047F41792A53DE6300A099C8 /* CityPopOver */ = {
+			isa = PBXGroup;
+			children = (
+				047F417A2A53DE8700A099C8 /* CityPopOverViewController.swift */,
+				047F417C2A53E27F00A099C8 /* CityPopOverCell.swift */,
+			);
+			path = CityPopOver;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -393,6 +407,7 @@
 				046A83D92A49A3CB00C8E7D6 /* MenuAssembly.swift in Sources */,
 				046A83DD2A49A51200C8E7D6 /* MenuInteractor.swift in Sources */,
 				046A83E52A49A5EA00C8E7D6 /* CartAssembly.swift in Sources */,
+				047F417D2A53E27F00A099C8 /* CityPopOverCell.swift in Sources */,
 				046A83F62A49AB8100C8E7D6 /* ProductDetailInteractor.swift in Sources */,
 				046A83E32A49A58400C8E7D6 /* MenuVC.swift in Sources */,
 				046A83F22A49A9F200C8E7D6 /* CartVC.swift in Sources */,
@@ -405,6 +420,7 @@
 				040946022A4B2CDC00D3157E /* ProductEntity+CoreDataProperties.swift in Sources */,
 				046A83EA2A49A86F00C8E7D6 /* ScreenRoutable.swift in Sources */,
 				042059152A4DAD1300521BF3 /* API.swift in Sources */,
+				047F417B2A53DE8700A099C8 /* CityPopOverViewController.swift in Sources */,
 				046A83EC2A49A95500C8E7D6 /* CartInteractor.swift in Sources */,
 				046A83BC2A49920A00C8E7D6 /* SceneDelegate.swift in Sources */,
 				042059172A4DAE4F00521BF3 /* ProductsAPI.swift in Sources */,
