@@ -6,13 +6,16 @@
 //
 
 protocol ProductDetailInteractorInputProtocol {
-    
+    func addProductToCart(_ product: Product)
 }
 
-protocol ProductDetailInteractorOutputProtocol {
-    
-}
+protocol ProductDetailInteractorOutputProtocol: AnyObject {}
 
 final class ProductDetailInteractor: ProductDetailInteractorInputProtocol {
+    func addProductToCart(_ product: Product) {
+        
+    }
+    
+    weak var presenter: ProductDetailInteractorOutputProtocol?
     
 }

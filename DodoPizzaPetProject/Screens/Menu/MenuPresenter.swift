@@ -10,13 +10,14 @@ import Foundation
 final class MenuPresenter: MenuViewOutputProtocol {
     
     weak var view: MenuViewInputProtocol?
-    
+    var router: MenuRouterInputProtocol?
     var interactor: MenuInteractorInputProtocol?
 
     var products: [Product] = []
     
-    init(interactor: MenuInteractorInputProtocol) {
+    init(interactor: MenuInteractorInputProtocol, router: MenuRouterInputProtocol) {
         self.interactor = interactor
+        self.router = router
     }
     
     func fetchCategories() {
@@ -34,7 +35,8 @@ final class MenuPresenter: MenuViewOutputProtocol {
     }
     
     func itemSelected(index: Int) {
-        // show product detail 
+        let product = products[index]
+        router?.showProductDetail(product: product)
     }
 }
 

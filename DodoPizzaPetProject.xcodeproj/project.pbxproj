@@ -44,10 +44,13 @@
 		046A83F62A49AB8100C8E7D6 /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83F52A49AB8100C8E7D6 /* ProductDetailInteractor.swift */; };
 		046A83F82A49ABDD00C8E7D6 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83F72A49ABDD00C8E7D6 /* ProductDetailPresenter.swift */; };
 		046A83FA2A49AC3000C8E7D6 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83F92A49AC3000C8E7D6 /* ProductDetailRouter.swift */; };
-		046A83FC2A49B06B00C8E7D6 /* ProductDetaileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83FB2A49B06B00C8E7D6 /* ProductDetaileView.swift */; };
+		046A83FC2A49B06B00C8E7D6 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83FB2A49B06B00C8E7D6 /* ProductDetailView.swift */; };
 		046A83FE2A49B09C00C8E7D6 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046A83FD2A49B09C00C8E7D6 /* ProductDetailVC.swift */; };
 		047F417B2A53DE8700A099C8 /* CityPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F417A2A53DE8700A099C8 /* CityPopOverViewController.swift */; };
 		047F417D2A53E27F00A099C8 /* CityPopOverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F417C2A53E27F00A099C8 /* CityPopOverCell.swift */; };
+		047F417F2A54041300A099C8 /* ProductDetailTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F417E2A54041300A099C8 /* ProductDetailTableAdapter.swift */; };
+		047F41822A5405DB00A099C8 /* ProductImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F41812A5405DB00A099C8 /* ProductImageCell.swift */; };
+		047F41842A54061B00A099C8 /* ProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F41832A54061B00A099C8 /* ProductInfoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,10 +92,13 @@
 		046A83F52A49AB8100C8E7D6 /* ProductDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailInteractor.swift; sourceTree = "<group>"; };
 		046A83F72A49ABDD00C8E7D6 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		046A83F92A49AC3000C8E7D6 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
-		046A83FB2A49B06B00C8E7D6 /* ProductDetaileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetaileView.swift; sourceTree = "<group>"; };
+		046A83FB2A49B06B00C8E7D6 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		046A83FD2A49B09C00C8E7D6 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductDetailVC.swift; path = ../../../../../../../../../Applications/ProductDetailVC.swift; sourceTree = "<group>"; };
 		047F417A2A53DE8700A099C8 /* CityPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPopOverViewController.swift; sourceTree = "<group>"; };
 		047F417C2A53E27F00A099C8 /* CityPopOverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPopOverCell.swift; sourceTree = "<group>"; };
+		047F417E2A54041300A099C8 /* ProductDetailTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableAdapter.swift; sourceTree = "<group>"; };
+		047F41812A5405DB00A099C8 /* ProductImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCell.swift; sourceTree = "<group>"; };
+		047F41832A54061B00A099C8 /* ProductInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,12 +294,14 @@
 		046A83D72A49A36400C8E7D6 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
+				047F41802A5405CF00A099C8 /* SubViews */,
 				046A83F32A49AB5C00C8E7D6 /* ProductDetailAssembly.swift */,
 				046A83F52A49AB8100C8E7D6 /* ProductDetailInteractor.swift */,
 				046A83F72A49ABDD00C8E7D6 /* ProductDetailPresenter.swift */,
 				046A83F92A49AC3000C8E7D6 /* ProductDetailRouter.swift */,
-				046A83FB2A49B06B00C8E7D6 /* ProductDetaileView.swift */,
+				046A83FB2A49B06B00C8E7D6 /* ProductDetailView.swift */,
 				046A83FD2A49B09C00C8E7D6 /* ProductDetailVC.swift */,
+				047F417E2A54041300A099C8 /* ProductDetailTableAdapter.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -313,6 +321,15 @@
 				047F417C2A53E27F00A099C8 /* CityPopOverCell.swift */,
 			);
 			path = CityPopOver;
+			sourceTree = "<group>";
+		};
+		047F41802A5405CF00A099C8 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				047F41812A5405DB00A099C8 /* ProductImageCell.swift */,
+				047F41832A54061B00A099C8 /* ProductInfoCell.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,8 +430,9 @@
 				046A83F22A49A9F200C8E7D6 /* CartVC.swift in Sources */,
 				04042AB82A52E76A00F08A8F /* BannersView.swift in Sources */,
 				040946082A4B320200D3157E /* ProductResponse.swift in Sources */,
+				047F417F2A54041300A099C8 /* ProductDetailTableAdapter.swift in Sources */,
 				046A83DB2A49A4DD00C8E7D6 /* MenuRouter.swift in Sources */,
-				046A83FC2A49B06B00C8E7D6 /* ProductDetaileView.swift in Sources */,
+				046A83FC2A49B06B00C8E7D6 /* ProductDetailView.swift in Sources */,
 				04042ABA2A52E84800F08A8F /* BannerCell.swift in Sources */,
 				0420591A2A4DC6AB00521BF3 /* ProductsRepository.swift in Sources */,
 				040946022A4B2CDC00D3157E /* ProductEntity+CoreDataProperties.swift in Sources */,
@@ -426,8 +444,10 @@
 				042059172A4DAE4F00521BF3 /* ProductsAPI.swift in Sources */,
 				046A83F82A49ABDD00C8E7D6 /* ProductDetailPresenter.swift in Sources */,
 				046A83FA2A49AC3000C8E7D6 /* ProductDetailRouter.swift in Sources */,
+				047F41842A54061B00A099C8 /* ProductInfoCell.swift in Sources */,
 				042059122A4D934A00521BF3 /* ProductsEndpoint.swift in Sources */,
 				046A83F42A49AB5C00C8E7D6 /* ProductDetailAssembly.swift in Sources */,
+				047F41822A5405DB00A099C8 /* ProductImageCell.swift in Sources */,
 				046A83DF2A49A53500C8E7D6 /* MenuPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
