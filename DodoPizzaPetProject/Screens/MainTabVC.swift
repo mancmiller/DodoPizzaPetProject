@@ -10,6 +10,19 @@ import UIKit
 class MainTabVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemGray
+        
+        tabBar.tintColor = UIColor(named: "accentColor")
+        
+        let menuVC = MenuAssembly().configure()
+        menuVC.tabBarItem.title = "Меню"
+        menuVC.tabBarItem.image = UIImage(named: "menuIcon")
+        
+        let cartVC = CartAssembly().configure()
+        cartVC.tabBarItem.title = "Корзина"
+        cartVC.tabBarItem.image = UIImage(named: "shoppingCartIcon")
+        
+        let menuNav = UINavigationController(rootViewController: menuVC)
+        
+        self.viewControllers = [menuNav, cartVC]
     }
 }
