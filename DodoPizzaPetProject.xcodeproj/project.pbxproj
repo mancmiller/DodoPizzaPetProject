@@ -93,7 +93,7 @@
 		046A83F72A49ABDD00C8E7D6 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
 		046A83F92A49AC3000C8E7D6 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
 		046A83FB2A49B06B00C8E7D6 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
-		046A83FD2A49B09C00C8E7D6 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProductDetailVC.swift; path = ../../../../../../../../../Applications/ProductDetailVC.swift; sourceTree = "<group>"; };
+		046A83FD2A49B09C00C8E7D6 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		047F417A2A53DE8700A099C8 /* CityPopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPopOverViewController.swift; sourceTree = "<group>"; };
 		047F417C2A53E27F00A099C8 /* CityPopOverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityPopOverCell.swift; sourceTree = "<group>"; };
 		047F417E2A54041300A099C8 /* ProductDetailTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableAdapter.swift; sourceTree = "<group>"; };

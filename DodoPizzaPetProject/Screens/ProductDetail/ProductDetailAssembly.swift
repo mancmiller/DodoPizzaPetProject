@@ -14,7 +14,7 @@ final class ProductDetailAssembly {
         let view = ProductDetailView(tableAdapter: tableAdapter)
         let interactor = ProductDetailInteractor()
         let presenter = ProductDetailPresenter(router: router, interactor: interactor)
-        let controller = ProductDetailVC(presenter: presenter, rootView: view)
+        let controller = ProductDetailVC(rootView: view, presenter: presenter)
         
         presenter.view = controller
         presenter.configureModule(with: product)
