@@ -51,6 +51,7 @@
 		047F417F2A54041300A099C8 /* ProductDetailTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F417E2A54041300A099C8 /* ProductDetailTableAdapter.swift */; };
 		047F41822A5405DB00A099C8 /* ProductImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F41812A5405DB00A099C8 /* ProductImageCell.swift */; };
 		047F41842A54061B00A099C8 /* ProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F41832A54061B00A099C8 /* ProductInfoCell.swift */; };
+		04E857952A5E8D0500E71196 /* SkeletonLoadingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E857942A5E8D0500E71196 /* SkeletonLoadingProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,7 @@
 		047F417E2A54041300A099C8 /* ProductDetailTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableAdapter.swift; sourceTree = "<group>"; };
 		047F41812A5405DB00A099C8 /* ProductImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCell.swift; sourceTree = "<group>"; };
 		047F41832A54061B00A099C8 /* ProductInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoCell.swift; sourceTree = "<group>"; };
+		04E857942A5E8D0500E71196 /* SkeletonLoadingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadingProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				046A83E92A49A86F00C8E7D6 /* ScreenRoutable.swift */,
+				04E857942A5E8D0500E71196 /* SkeletonLoadingProtocol.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				046A83E12A49A57300C8E7D6 /* MenuView.swift in Sources */,
 				046A83CE2A4994C100C8E7D6 /* MainTabVC.swift in Sources */,
 				046A83D92A49A3CB00C8E7D6 /* MenuAssembly.swift in Sources */,
+				04E857952A5E8D0500E71196 /* SkeletonLoadingProtocol.swift in Sources */,
 				046A83DD2A49A51200C8E7D6 /* MenuInteractor.swift in Sources */,
 				046A83E52A49A5EA00C8E7D6 /* CartAssembly.swift in Sources */,
 				047F417D2A53E27F00A099C8 /* CityPopOverCell.swift in Sources */,
