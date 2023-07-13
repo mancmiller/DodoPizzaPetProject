@@ -20,18 +20,22 @@ final class CategoriesView: UITableViewHeaderFooterView {
 // MARK: - Private Properties
     private var categories: [String]
     
+    private var loaded: Bool
+    
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
         collectionView.allowsSelection = false
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(CategoryCell.self, forCellWithReuseIdentifier: CategoryCell.reuseID)
+        collectionView.register(CategorySkeletonCell.self, forCellWithReuseIdentifier: CategorySkeletonCell.reuseID)
         return collectionView
     }()
     
 // MARK: - Life Cycle
-    init(categories: [String]) {
+    init(categories: [String], loaded: Bool) {
         self.categories = categories
+        self.loaded = loaded
         super.init(reuseIdentifier: CategoryCell.reuseID)
         setupConstraints()
     }
@@ -80,14 +84,23 @@ extension CategoriesView {
 extension CategoriesView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        collectionView.allowsSelection = true
-        return categories.count
+        if loaded {
+            collectionView.allowsSelection = true
+            return categories.count
+        } else {
+            return 4
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell: CategoryCell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.reuseID, for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
-        cell.configure(category: categories[indexPath.row])
-        return cell
+        if loaded {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCell.reuseID, for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
+            cell.configure(category: categories[indexPath.row])
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategorySkeletonCell.reuseID, for: indexPath) as? CategorySkeletonCell else { return UICollectionViewCell() }
+            return cell
+        }
     }
 }
 

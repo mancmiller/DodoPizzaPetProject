@@ -51,6 +51,10 @@
 		047F417F2A54041300A099C8 /* ProductDetailTableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F417E2A54041300A099C8 /* ProductDetailTableAdapter.swift */; };
 		047F41822A5405DB00A099C8 /* ProductImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F41812A5405DB00A099C8 /* ProductImageCell.swift */; };
 		047F41842A54061B00A099C8 /* ProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F41832A54061B00A099C8 /* ProductInfoCell.swift */; };
+		04E857952A5E8D0500E71196 /* SkeletonLoadingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E857942A5E8D0500E71196 /* SkeletonLoadingProtocol.swift */; };
+		04E857992A5E91D400E71196 /* MenuSkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E857982A5E91D400E71196 /* MenuSkeletonCell.swift */; };
+		04E8579B2A5FC48000E71196 /* BannerSkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8579A2A5FC48000E71196 /* BannerSkeletonCell.swift */; };
+		04E8579D2A5FC9F200E71196 /* CategorySkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E8579C2A5FC9F200E71196 /* CategorySkeletonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +103,10 @@
 		047F417E2A54041300A099C8 /* ProductDetailTableAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableAdapter.swift; sourceTree = "<group>"; };
 		047F41812A5405DB00A099C8 /* ProductImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCell.swift; sourceTree = "<group>"; };
 		047F41832A54061B00A099C8 /* ProductInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoCell.swift; sourceTree = "<group>"; };
+		04E857942A5E8D0500E71196 /* SkeletonLoadingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadingProtocol.swift; sourceTree = "<group>"; };
+		04E857982A5E91D400E71196 /* MenuSkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSkeletonCell.swift; sourceTree = "<group>"; };
+		04E8579A2A5FC48000E71196 /* BannerSkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerSkeletonCell.swift; sourceTree = "<group>"; };
+		04E8579C2A5FC9F200E71196 /* CategorySkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySkeletonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 			children = (
 				0420591C2A4EF5A800521BF3 /* CategoriesView.swift */,
 				0420591E2A4EF6B600521BF3 /* CategoryCell.swift */,
+				04E8579C2A5FC9F200E71196 /* CategorySkeletonCell.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -127,6 +136,7 @@
 			children = (
 				04042AB72A52E76A00F08A8F /* BannersView.swift */,
 				04042AB92A52E84800F08A8F /* BannerCell.swift */,
+				04E8579A2A5FC48000E71196 /* BannerSkeletonCell.swift */,
 			);
 			path = Banners;
 			sourceTree = "<group>";
@@ -146,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				0409460A2A4B33C500D3157E /* ProductCell.swift */,
+				04E857982A5E91D400E71196 /* MenuSkeletonCell.swift */,
 			);
 			path = ProductCell;
 			sourceTree = "<group>";
@@ -310,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				046A83E92A49A86F00C8E7D6 /* ScreenRoutable.swift */,
+				04E857942A5E8D0500E71196 /* SkeletonLoadingProtocol.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -413,6 +425,7 @@
 				040946062A4B30D200D3157E /* MenuTableAdapter.swift in Sources */,
 				046A83EE2A49A99900C8E7D6 /* CartPresenter.swift in Sources */,
 				040946012A4B2CDC00D3157E /* ProductEntity+CoreDataClass.swift in Sources */,
+				04E8579D2A5FC9F200E71196 /* CategorySkeletonCell.swift in Sources */,
 				046A83E72A49A60200C8E7D6 /* CartRouter.swift in Sources */,
 				0420591D2A4EF5A800521BF3 /* CategoriesView.swift in Sources */,
 				0409460B2A4B33C500D3157E /* ProductCell.swift in Sources */,
@@ -422,6 +435,7 @@
 				046A83E12A49A57300C8E7D6 /* MenuView.swift in Sources */,
 				046A83CE2A4994C100C8E7D6 /* MainTabVC.swift in Sources */,
 				046A83D92A49A3CB00C8E7D6 /* MenuAssembly.swift in Sources */,
+				04E857952A5E8D0500E71196 /* SkeletonLoadingProtocol.swift in Sources */,
 				046A83DD2A49A51200C8E7D6 /* MenuInteractor.swift in Sources */,
 				046A83E52A49A5EA00C8E7D6 /* CartAssembly.swift in Sources */,
 				047F417D2A53E27F00A099C8 /* CityPopOverCell.swift in Sources */,
@@ -437,12 +451,14 @@
 				0420591A2A4DC6AB00521BF3 /* ProductsRepository.swift in Sources */,
 				040946022A4B2CDC00D3157E /* ProductEntity+CoreDataProperties.swift in Sources */,
 				046A83EA2A49A86F00C8E7D6 /* ScreenRoutable.swift in Sources */,
+				04E857992A5E91D400E71196 /* MenuSkeletonCell.swift in Sources */,
 				042059152A4DAD1300521BF3 /* API.swift in Sources */,
 				047F417B2A53DE8700A099C8 /* CityPopOverViewController.swift in Sources */,
 				046A83EC2A49A95500C8E7D6 /* CartInteractor.swift in Sources */,
 				046A83BC2A49920A00C8E7D6 /* SceneDelegate.swift in Sources */,
 				042059172A4DAE4F00521BF3 /* ProductsAPI.swift in Sources */,
 				046A83F82A49ABDD00C8E7D6 /* ProductDetailPresenter.swift in Sources */,
+				04E8579B2A5FC48000E71196 /* BannerSkeletonCell.swift in Sources */,
 				046A83FA2A49AC3000C8E7D6 /* ProductDetailRouter.swift in Sources */,
 				047F41842A54061B00A099C8 /* ProductInfoCell.swift in Sources */,
 				042059122A4D934A00521BF3 /* ProductsEndpoint.swift in Sources */,

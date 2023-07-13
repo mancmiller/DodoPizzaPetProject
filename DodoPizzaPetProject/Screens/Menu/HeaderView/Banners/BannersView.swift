@@ -13,11 +13,14 @@ final class BannersView: UIView {
     // MARK: - Private Properties
     private var banners: [String] = []
     
+    private var loaded = false
+    
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
         collectionView.allowsSelection = false
         collectionView.dataSource = self
         collectionView.register(BannerCell.self, forCellWithReuseIdentifier: BannerCell.reuseID)
+        collectionView.register(BannerSkeletonCell.self, forCellWithReuseIdentifier: BannerSkeletonCell.reuseID)
         return collectionView
     }()
     
@@ -34,6 +37,7 @@ final class BannersView: UIView {
     // MARK: - Public Method
     func update(bannersString: [String]){
         banners = bannersString
+        loaded = true
         collectionView.reloadData()
     }
     
@@ -70,17 +74,27 @@ final class BannersView: UIView {
     }
 }
 
+// MARK: - Data Source
 extension BannersView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return banners.count
+        if loaded {
+            return banners.count
+        } else {
+            return 4
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.reuseID, for: indexPath) as? BannerCell else { return UICollectionViewCell() }
-        let banner = banners[indexPath.row]
-        cell.configure(string: banner)
-        
-        return cell
+        if loaded {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerCell.reuseID, for: indexPath) as? BannerCell else { return UICollectionViewCell() }
+            let banner = banners[indexPath.row]
+            cell.configure(string: banner)
+            
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BannerSkeletonCell.reuseID, for: indexPath) as? BannerSkeletonCell else { return UICollectionViewCell() }
+            return cell
+        }
     }
 }
