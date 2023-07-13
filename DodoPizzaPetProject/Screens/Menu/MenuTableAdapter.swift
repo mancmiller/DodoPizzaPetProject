@@ -14,6 +14,7 @@ protocol MenuTableAdapterOutputProtocol: AnyObject {
 final class MenuTableAdapter: NSObject {
     var items: [Product] = []
     var categories: [String] = []
+    var loaded = false
     
     weak var view: CategoriesViewDelegate?
     weak var controller: MenuTableAdapterOutputProtocol?
@@ -48,15 +49,25 @@ extension MenuTableAdapter: UITableViewDelegate {
 //MARK: - UITableViewDataSource
 extension MenuTableAdapter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        if loaded {
+            return items.count
+        } else {
+            return 4
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseID) as? ProductCell else { return UITableViewCell() }
-        
-        let product = items[indexPath.row]
-        cell.configure(model: product)
-        cell.selectionStyle = .none
-        return cell
+        if loaded {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductCell.reuseID) as? ProductCell else { return UITableViewCell() }
+            
+            let product = items[indexPath.row]
+            cell.configure(model: product)
+            cell.selectionStyle = .none
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MenuSkeletonCell.reuseID, for: indexPath) as? MenuSkeletonCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
+            return cell
+        }
     }
 }

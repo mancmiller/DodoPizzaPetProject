@@ -52,6 +52,7 @@
 		047F41822A5405DB00A099C8 /* ProductImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F41812A5405DB00A099C8 /* ProductImageCell.swift */; };
 		047F41842A54061B00A099C8 /* ProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F41832A54061B00A099C8 /* ProductInfoCell.swift */; };
 		04E857952A5E8D0500E71196 /* SkeletonLoadingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E857942A5E8D0500E71196 /* SkeletonLoadingProtocol.swift */; };
+		04E857992A5E91D400E71196 /* MenuSkeletonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E857982A5E91D400E71196 /* MenuSkeletonCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		047F41812A5405DB00A099C8 /* ProductImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageCell.swift; sourceTree = "<group>"; };
 		047F41832A54061B00A099C8 /* ProductInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoCell.swift; sourceTree = "<group>"; };
 		04E857942A5E8D0500E71196 /* SkeletonLoadingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadingProtocol.swift; sourceTree = "<group>"; };
+		04E857982A5E91D400E71196 /* MenuSkeletonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSkeletonCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				0409460A2A4B33C500D3157E /* ProductCell.swift */,
+				04E857982A5E91D400E71196 /* MenuSkeletonCell.swift */,
 			);
 			path = ProductCell;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				0420591A2A4DC6AB00521BF3 /* ProductsRepository.swift in Sources */,
 				040946022A4B2CDC00D3157E /* ProductEntity+CoreDataProperties.swift in Sources */,
 				046A83EA2A49A86F00C8E7D6 /* ScreenRoutable.swift in Sources */,
+				04E857992A5E91D400E71196 /* MenuSkeletonCell.swift in Sources */,
 				042059152A4DAD1300521BF3 /* API.swift in Sources */,
 				047F417B2A53DE8700A099C8 /* CityPopOverViewController.swift in Sources */,
 				046A83EC2A49A95500C8E7D6 /* CartInteractor.swift in Sources */,

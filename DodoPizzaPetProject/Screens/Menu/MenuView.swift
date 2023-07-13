@@ -21,6 +21,7 @@ final class MenuView: UIView {
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.allowsSelection = false
+        tableView.register(MenuSkeletonCell.self, forCellReuseIdentifier: MenuSkeletonCell.reuseID)
         tableView.register(ProductCell.self, forCellReuseIdentifier: ProductCell.reuseID)
         tableView.dataSource = tableAdapter
         tableView.delegate = tableAdapter
