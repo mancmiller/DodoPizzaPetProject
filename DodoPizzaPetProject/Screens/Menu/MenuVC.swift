@@ -82,6 +82,7 @@ extension MenuVC: MenuViewInputProtocol {
     func updateProducts(_ products: [Product]) {
         rootView.tableView.allowsSelection = true
         rootView.tableAdapter.items = products
+        rootView.tableAdapter.loaded = true
         presenter.fetchCategories()
         rootView.tableView.reloadData()
     }
@@ -93,6 +94,7 @@ extension MenuVC: MenuViewInputProtocol {
     
     func updateCategories(_ categories: [String]) {
         rootView.tableAdapter.categories = categories
+        rootView.tableAdapter.loaded = true
         rootView.tableView.reloadData()
     }
 }

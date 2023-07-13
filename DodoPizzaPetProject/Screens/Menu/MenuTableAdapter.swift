@@ -27,7 +27,7 @@ extension MenuTableAdapter {
     }
 }
 
-//MARK: - UITableViewDelegate
+//MARK: - Delegate
 extension MenuTableAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         controller?.itemSelected(index: indexPath.row)
@@ -38,7 +38,7 @@ extension MenuTableAdapter: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let categoriesView = CategoriesView(categories: categories)
+        let categoriesView = CategoriesView(categories: categories, loaded: loaded)
         categoriesView.delegate = view
         return categoriesView
     }
@@ -46,7 +46,7 @@ extension MenuTableAdapter: UITableViewDelegate {
     
 }
 
-//MARK: - UITableViewDataSource
+//MARK: - DataSource
 extension MenuTableAdapter: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if loaded {
@@ -64,6 +64,7 @@ extension MenuTableAdapter: UITableViewDataSource {
             cell.configure(model: product)
             cell.selectionStyle = .none
             return cell
+            
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MenuSkeletonCell.reuseID, for: indexPath) as? MenuSkeletonCell else { return UITableViewCell() }
             cell.selectionStyle = .none
