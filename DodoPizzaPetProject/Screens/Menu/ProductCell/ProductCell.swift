@@ -38,7 +38,7 @@ final class ProductCell: UITableViewCell {
     
     private let priceButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(named: "accentColor")
+        button.backgroundColor = UIColor(named: "AccentColor")
         return button
     }()
     
@@ -73,7 +73,7 @@ final class ProductCell: UITableViewCell {
     func configure(model: Product) {
         productNameLabel.text = model.name
         productDescriptionLabel.text = model.itemDescription
-        priceButton.setTitle("₽ \(model.price)", for: .normal)
+        priceButton.setTitle("\(model.price) ₸", for: .normal)
         productImageView.image = UIImage(named: model.image)
     }
 }

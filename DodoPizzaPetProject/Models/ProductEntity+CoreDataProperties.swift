@@ -20,7 +20,6 @@ extension ProductEntity {
     @NSManaged public var itemDescription: String?
     @NSManaged public var image: String?
     @NSManaged public var id: Int32
-    @NSManaged public var count: Int16
     @NSManaged public var category: String?
 
 }

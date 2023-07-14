@@ -33,7 +33,7 @@ final class MenuView: UIView {
     // MARK: - CityLabel
     let cityLabel: UILabel = {
         let label = UILabel()
-        label.text = "Москва"
+        label.text = "Алматы"
         label.font = .systemFont(ofSize: 20, weight: .medium)
         return label
     }()

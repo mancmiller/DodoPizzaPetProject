@@ -15,5 +15,5 @@ struct ProductsResponse: Codable {
 struct Product: Codable {
     let id: Int
     let name, category, itemDescription, image: String
-    var price, count: Int
+    var price: Int
 }

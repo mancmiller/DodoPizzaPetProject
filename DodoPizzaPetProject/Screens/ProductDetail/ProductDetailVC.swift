@@ -61,12 +61,16 @@ extension ProductDetailVC: ProductDetailViewDelegateProtocol {
         presenter?.addToCart()
         dismissView(animated: true, completion: nil)
     }
+    
+    func closeButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 //MARK: - DetailProductViewInputProtocol
 extension ProductDetailVC: ProductDetailViewInputProtocol {
     func updatePriceButton(_ product: Product) {
-        rootView.orderButton.setTitle("В корзину за ₽\(product.price)", for: .normal)
+        rootView.orderButton.setTitle("В корзину за \(product.price) ₸", for: .normal)
     }
     
     func updateProduct(_ product: Product?) {

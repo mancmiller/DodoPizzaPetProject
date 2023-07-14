@@ -25,11 +25,11 @@ final class CategoryCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             if isSelected {
-                contentView.backgroundColor = UIColor(named: "accentColor")
+                contentView.backgroundColor = UIColor(named: "AccentColor")
                 titleLabel.textColor = .white
             } else {
                 contentView.backgroundColor = .systemBackground
-                titleLabel.textColor = .label
+                titleLabel.textColor = .secondaryLabel
             }
         }
     }
@@ -53,7 +53,7 @@ final class CategoryCell: UICollectionViewCell {
 // MARK: - Private Methods
     private func setupView() {
         contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor(named: "accentColor")?.cgColor
+        contentView.layer.borderColor = UIColor(named: "AccentColor")?.cgColor
         contentView.layer.cornerRadius = contentView.frame.height / 2
     }
 }
