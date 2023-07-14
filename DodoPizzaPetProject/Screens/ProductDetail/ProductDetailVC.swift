@@ -61,6 +61,10 @@ extension ProductDetailVC: ProductDetailViewDelegateProtocol {
         presenter?.addToCart()
         dismissView(animated: true, completion: nil)
     }
+    
+    func closeButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 //MARK: - DetailProductViewInputProtocol

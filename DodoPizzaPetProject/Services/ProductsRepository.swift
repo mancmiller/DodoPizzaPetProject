@@ -49,7 +49,7 @@ final class ProductsRepository: ProductsRepositoryInputProtocol {
             product.setValue(i.itemDescription, forKey: "itemDescription")
             product.setValue(i.image, forKey: "image")
             product.setValue(i.price, forKey: "price")
-            product.setValue(i.count, forKey: "count")
+//            product.setValue(i.count, forKey: "count")
         }
         
         if viewContext.hasChanges {
@@ -73,8 +73,7 @@ final class ProductsRepository: ProductsRepositoryInputProtocol {
                         category: i.category ?? "",
                         itemDescription: i.itemDescription ?? "",
                         image: i.image ?? "",
-                        price: Int(i.price),
-                        count: Int(i.count)
+                        price: Int(i.price)
                     )
                     products.append(product)
                 }

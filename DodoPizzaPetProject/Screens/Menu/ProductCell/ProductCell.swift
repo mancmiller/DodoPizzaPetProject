@@ -38,7 +38,7 @@ final class ProductCell: UITableViewCell {
     
     private let priceButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(named: "accentColor")
+        button.backgroundColor = UIColor(named: "AccentColor")
         return button
     }()
     

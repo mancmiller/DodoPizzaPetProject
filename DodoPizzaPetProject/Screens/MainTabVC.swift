@@ -11,7 +11,7 @@ class MainTabVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBar.tintColor = UIColor(named: "accentColor")
+        tabBar.tintColor = UIColor(named: "AccentColor")
         
         let menuVC = MenuAssembly().configure()
         menuVC.tabBarItem.title = "Меню"
