@@ -70,7 +70,7 @@ extension ProductDetailVC: ProductDetailViewDelegateProtocol {
 //MARK: - DetailProductViewInputProtocol
 extension ProductDetailVC: ProductDetailViewInputProtocol {
     func updatePriceButton(_ product: Product) {
-        rootView.orderButton.setTitle("В корзину за ₽\(product.price)", for: .normal)
+        rootView.orderButton.setTitle("В корзину за \(product.price) ₸", for: .normal)
     }
     
     func updateProduct(_ product: Product?) {

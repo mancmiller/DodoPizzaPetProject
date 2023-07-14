@@ -17,7 +17,7 @@ final class CityPopOverViewController: UIViewController {
     weak var delegate: CityPopOverViewOutputProtocol?
     
     // MARK: - Private Properties
-    private var cities = ["Москва", "Санкт-Петербург", "Новосибирск", "Екатеринбург", "Казань", "Самара", "Омск"]
+    private var cities = ["Алматы", "Астана", "Караганда", "Кокшетау", "Костанай", "Павлодар", "Талдыкорган"]
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(CityPopOverCell.self, forCellReuseIdentifier: CityPopOverCell.reuseID)

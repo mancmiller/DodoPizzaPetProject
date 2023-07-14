@@ -73,7 +73,7 @@ final class ProductCell: UITableViewCell {
     func configure(model: Product) {
         productNameLabel.text = model.name
         productDescriptionLabel.text = model.itemDescription
-        priceButton.setTitle("₽ \(model.price)", for: .normal)
+        priceButton.setTitle("\(model.price) ₸", for: .normal)
         productImageView.image = UIImage(named: model.image)
     }
 }
